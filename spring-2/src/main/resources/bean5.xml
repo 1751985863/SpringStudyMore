@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+    <!--配置后置处理器-->
+
+    <bean id="post3" class="com.nanfeng.collection.bean.MyBeanPost3" init-method="initMethod" destroy-method="destroyMethod">
+        <property name="name" value="nanfeng"/>
+    </bean>
+
+    <bean id="post4" class="com.nanfeng.collection.bean.MyBeanPost4" init-method="initMethod" destroy-method="destroyMethod">
+        <property name="name" value="nanfeng"/>
+    </bean>
+</beans>

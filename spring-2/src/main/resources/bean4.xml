@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="orders" class="com.nanfeng.collection.bean.Orders" init-method="initMethod" destroy-method="destroy">
+        <property name="name" value="手机"/>
+    </bean>
+
+    <!--配置后置处理器-->
+
+    <!--配置后置处理器-->
+    <bean id="myBeanPost1" class="com.nanfeng.collection.bean.MyBeanPost1"/>
+
+    <bean id="myBeanPost" class="com.nanfeng.collection.bean.MyBeanPost"/>
+
+
+
+
+</beans>

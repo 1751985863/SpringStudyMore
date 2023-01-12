@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--1.创建user对象-->
+    <!--<bean id="user" class="com.nanfeng.User" />-->
+    <!--2.set方法注入属性-->
+<!--
+    <bean id="book" class="com.nanfeng.Book">
+        <property name="bName" value="年终总结"/>
+        <property name="bAuthor" value="杨大作"/>
+    </bean>
+-->
+    <!--3.有参构造-->
+    <bean id="order" class="com.nanfeng.Order">
+        <constructor-arg name="address" value="china"/>
+        <!--也可以使用index 也就是第几个属性-->
+        <!--<constructor-arg index="0" value="china"/>-->
+    </bean>
+
+</beans>

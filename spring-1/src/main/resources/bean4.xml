@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--建联赋值-->
+    <bean id="emp" class="com.nanfeng.bean.Emp">
+
+        <property name="eName" value="lucy"/>
+        <property name="gender" value="女"/>
+        <property name="dept" ref="dept"/>
+        <!--第二种方式，但是必须要dept的getter方法-->
+        <property name="dept.dName" value="技术"/>
+
+    </bean>
+    <bean  id="dept" class="com.nanfeng.bean.Dept">
+        <property name="dName" value="财务"/>
+    </bean>
+
+</beans>
