@@ -3,15 +3,21 @@ package com.nanfeng.aopanno;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+@Order(1)
 @Aspect
 @Component
 public class UserProxy {
 
 
+    // 公共切入点的抽取
+    @Pointcut(value = "execution(* com.nanfeng.aopanno.User.add(..))")
+    public void pointDemo() {
+    }
     // 使用before表示前置通知
-    @Before(value = "execution(* com.nanfeng.aopanno.User.add(..))")
+    @Before(value = "pointDemo()")
     //前置通知
     public void before() {
         System.out.println("before-----");
