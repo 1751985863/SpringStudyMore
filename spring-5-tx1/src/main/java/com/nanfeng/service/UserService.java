@@ -3,19 +3,29 @@ package com.nanfeng.service;
 import com.nanfeng.dao.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class UserService {
 
     @Autowired
     private UserDao userDao;
 
     public void accountMoney() {
+        // 1.开启事务
 
-        userDao.reduceMoney();
+        // 2.业务操作
+        try {
+            userDao.reduceMoney();
 
-        int i = 1 / 0;
+            int i = 1 / 0;
 
-        userDao.addMoney();
+            userDao.addMoney();
+        } catch (Exception e) {
+            // 事务回滚
+        }
+
+
     }
 }
