@@ -14,6 +14,7 @@ public class UserService {
 
         userDao.reduceMoney();
 
+        int i = 1 / 0;
 
         userDao.addMoney();
     }
