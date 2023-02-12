@@ -17,14 +17,16 @@ public class UserService {
 
         // 2.业务操作
         try {
-            userDao.reduceMoney();
 
-            int i = 1 / 0;
-
-            userDao.addMoney();
         } catch (Exception e) {
             // 事务回滚
         }
+
+        userDao.reduceMoney();
+
+        int i = 1 / 0;
+
+        userDao.addMoney();
 
 
     }
